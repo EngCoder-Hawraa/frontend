@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Form (Multi-Step) </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="Form1" action="">
+            <h3>انشاء حساب</h3>
+            <input type="text" placeholder="البريد الالكتروني" required>
+            <input type="password" placeholder="كلمة المرور" required>
+            <input type="password" placeholder="تأكيد كلمة المرور" required>
+            <div class="btn-box">
+                <button type="button" onclick="changeColor()" id="Next1">التالي</button>
+            </div>
+        </form>
+        <form id="Form2" action="">
+            <h3>مواقع التواصل</h3>
+            <input type="text" placeholder="Github" required>
+            <input type="password" placeholder="Facebook" required>
+            <input type="password" placeholder="Linkedin" required>
+            <div class="btn-box">
+                <button type="button" onclick="changeColor()" id="Back1">السابق</button>
+                <button type="button" onclick="changeColor()" id="Next2">التالي</button>
+            </div>
+        </form>
+        <form id="Form3" action="">
+            <h3>المعلومات الشخصية</h3>
+            <input type="text" placeholder="الاسم الاول" required>
+            <input type="password" placeholder="الاسم الثاني" required>
+            <input type="password" placeholder="رقم الهاتف" required>
+            <div class="btn-box">
+                <button type="button" onclick="changeColor()" id="Back2">السابق</button>
+                <button type="button" onclick="changeColor()" id="Next3">ارسال</button>
+            </div>
+        </form>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col" id="step1"><small>خطوة 1</small></div>
+            <div class="step-col" id="step2"><small>خطوة 2</small></div>
+            <div class="step-col" id="step3"><small>خطوة 3</small></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

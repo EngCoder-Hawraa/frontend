@@ -1,0 +1,237 @@
+body {
+   @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+   font-family: 'Ubuntu Mono', sans-serif;
+   padding: 250px;
+   max-width: 500px;
+   margin:0 auto;
+   background-color:#695ded; 
+ }
+ 
+ h2{
+   font-size: 30px;
+   color:#fff;
+   text-align:center;
+ }
+ 
+ 
+ hr{
+   display:block;
+   margin:0 auto;
+   height:30px;
+   width:300px;
+   border:none;
+   border-radius: 3px;
+   animation: KITTAnim 1s infinite ease-in-out alternate;
+ }
+ 
+ hr:before{
+   content:" ";
+   display:inline-block;
+   width:30px;
+   height:30px;
+   animation: KITTAnimBefore 1s infinite ease-in-out alternate;
+ }
+ 
+ hr:after{
+   content:" ";
+   display:inline-block;
+   width:30px;
+   height:30px;
+   animation: KITTAnimAfter 1s infinite ease-in-out alternate;
+ }
+ 
+ hr:nth-child(even)
+ {
+   animation: KARRAnim 1s infinite ease-in-out alternate;
+ }
+ 
+ hr:nth-child(even):after
+ {
+   animation: KARRAnimAfter 1s infinite ease-in-out alternate;
+ }
+ 
+ hr:nth-child(even):before
+ {
+   animation: KARRAnimBefore 1s infinite ease-in-out alternate;
+ }
+ 
+ /**
+     Keyframes
+ Do not try at home
+ 
+ **/
+ 
+
+ @keyframes KARRAnim {
+    0% {
+       background-color:#333300;
+       border-left:30px solid #ffff00;
+       border-right:30px solid #333300;
+    }
+    10% {
+       background-color:#333300;
+       border-left:30px solid #ffff00;
+       border-right:30px solid #333300;
+    }
+    20% {
+       background-color:#333300;
+       border-left:30px solid #cccc00;
+       border-right:30px solid #333300;
+    }
+    30% {
+       background-color:#333300;
+       border-left:30px solid #808000;
+       border-right:30px solid #333300;
+    }
+    40% {
+       background-color:#333300;
+       border-left:30px solid #4c4c00;
+       border-right:30px solid #333300;
+    }
+    50% {
+       background-color:#4c4c00;
+       border-left:30px solid #333300;
+       border-right:30px solid #333300;
+    }
+    60% {
+       background-color:#808000;
+       border-left:30px solid #333300;
+       border-right:30px solid #4c4c00;
+    }
+    70% {
+       background-color:#cccc00;
+       border-left:30px solid #333300;
+       border-right:30px solid #808000;
+    }
+    80% {
+       background-color:#ffff00;
+       border-left:30px solid #333300;
+       border-right:30px solid #cccc00;
+    }
+    90% {
+       background-color:#cccc00;
+       border-left:30px solid #333300;
+       border-right:30px solid #ffff00;
+    }
+    100% {
+       background-color:#cccc00;
+       border-left:30px solid #333300;
+       border-right:30px solid #ffff00;
+    }
+ }
+ 
+ @keyframes KARRAnimBefore {
+    0% {
+       background-color:#808000;
+       border-left:30px solid #cccc00;
+       border-right:30px solid #4c4c00;
+    }
+    10% {
+       background-color:#808000;
+       border-left:30px solid #cccc00;
+       border-right:30px solid #4c4c00;
+    }
+    20% {
+       background-color:#cccc00;
+       border-left:30px solid #ffff00;
+       border-right:30px solid #808000;
+    }
+    30% {
+       background-color:#ffff00;
+       border-left:30px solid #cccc00;
+       border-right:30px solid #cccc00;
+    }
+    40% {
+       background-color:#cccc00;
+       border-left:30px solid #808000;
+       border-right:30px solid #ffff00;
+    }
+    50% {
+       background-color:#808000;
+       border-left:30px solid #4c4c00;
+       border-right:30px solid #cccc00;
+    }
+    60% {
+       background-color:#4c4c00;
+       border-left:30px solid #333300;
+       border-right:30px solid #808000;
+    }
+    70% {
+       background-color:#333300;
+       border-left:30px solid #333300;
+       border-right:30px solid #4c4c00;
+    }
+    80% {
+       background-color:#333300;
+       border-left:30px solid #333300;
+       border-right:30px solid #333300;
+    }
+    90% {
+       background-color:#333300;
+       border-left:30px solid #333300;
+       border-right:30px solid #333300;
+    }
+    100% {
+       background-color:#333300;
+       border-left:30px solid #333300;
+       border-right:30px solid #333300;
+    }
+ }
+ 
+ @keyframes KARRAnimAfter {
+    0% {
+       background-color:#333300;
+       border-left:30px solid #333300;
+       border-right:30px solid #333300;
+    }
+    10% {
+       background-color:#333300;
+       border-left:30px solid #333300;
+       border-right:30px solid #333300;
+    }
+    20% {
+       background-color:#333300;
+       border-left:30px solid #4c4c00;
+       border-right:30px solid #333300;
+    }
+    30% {
+       background-color:#4c4c00;
+       border-left:30px solid #808000;
+       border-right:30px solid #333300;
+    }
+    40% {
+       background-color:#808000;
+       border-left:30px solid #cccc00;
+       border-right:30px solid #4c4c00;
+    }
+    50% {
+       background-color:#cccc00;
+       border-left:30px solid #ffff00;
+       border-right:30px solid #808000;
+    }
+    60% {
+       background-color:#ffff00;
+       border-left:30px solid #cccc00;
+       border-right:30px solid #cccc00;
+    }
+    70% {
+       background-color:#cccc00;
+       border-left:30px solid #808000;
+       border-right:30px solid #ffff00;
+    }
+    80% {
+       background-color:#808000;
+       border-left:30px solid #4c4c00;
+       border-right:30px solid #cccc00;
+    }
+    90% {
+       background-color:#4c4c00;
+       border-left:30px solid #333300;
+       border-right:30px solid #808000;
+    }
+    100% {
+       background-color:#4c4c00;
+       border-left:30px solid #333300;
+       border-right:30px solid #808000;
+    }
+ }

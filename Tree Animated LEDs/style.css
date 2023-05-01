@@ -1,0 +1,305 @@
+main {
+    width: var(--size);
+    height: var(--size);
+    --size: 60vmin;
+    margin: auto;
+    position: relative;
+    display: flex;
+    perspective: 100vmin;
+    --back: #fff 100% 50%;
+    --fore: hsl(var(--fore-hue) 100% 50%);
+    --fore-hue: 343;
+  
+    animation: colors 20000ms infinite linear;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  body {
+    display: flex;
+    height: 100vh;
+    background: #695ded;
+  }
+
+  .drawing {
+    --skin: #fca;
+    --skindark: #fa9;
+    --suit: #c00;
+    --wool: #f0f0f0;
+    width: 80vmin;
+    height: 60vmin;
+    position: absolute;
+    top: 50%;
+    left:30%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .drawing div,
+  .drawing div::before,
+  .drawing div::after {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+  }
+  
+  .face {
+    width: 35%;
+    height: 25%;
+    background: var(--skin);
+    border-radius: 120% / 50%;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    box-shadow: 
+      inset 0 0.25vmin 1vmin var(--skindark),
+      -0.25vmin -0.5vmin 0.5vmin #0001,
+      0.5vmin -0.25vmin 0.5vmin #0002,
+      -1vmin -5vmin var(--wool),
+      1vmin -5vmin var(--wool)
+      ;
+  }
+  
+  .eye {
+    width: 24%;
+    height: 30%;
+    border-radius: 100%;
+    border: 0.25vmin solid #0000;
+    border-top: 1vmin solid;
+    top: 35%;
+    left: 15%;
+  }
+  .eye + .eye {
+    left: 61%;
+  }
+  
+  .eyebrow {
+    width: 35%;
+    height: 30%;
+    border-radius: 100%;
+    box-shadow: -0.125vmin -2.2vmin 0 -0.5vmin #fff;
+    top: 25%;
+    left: 8%;
+  }
+  
+  .eyebrow + .eyebrow {
+    right: 7.5%;
+    left: auto;
+  }
+  
+  .nose {
+    width: 20%;
+    height: 30%;
+    border-radius: 100% / 120% 120% 80% 80%;
+    background: var(--skin);
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    box-shadow: 
+      inset -0.5vmin -0.5vmin 0.5vmin -0.25vmin var(--skindark),
+      inset 0vmin -0.75vmin 0.5vmin -0.25vmin var(--skindark),
+      inset 0.5vmin -1vmin 1vmin -0.75vmin var(--skindark);
+  }
+  
+  .mustache {
+    width: 30%;
+    height: 30%;
+    background: white;
+    border-radius: 100% 0;
+    top: 59%;
+    left: 50%;
+    transform: translate(-100%, 0) rotate(15deg);
+    box-shadow: inset -0.25vmin -0.25vmin 0.75vmin #0002
+  }
+  
+  .mustache + .mustache {
+    transform: scaleX(-1) translate(0, 0) rotate(15deg);
+  }
+  
+  .lip {
+    width: 14%;
+    height: 10%;
+    background: var(--skindark);
+    box-shadow: inset 0 -0.25vmin 0.75vmin #f003;
+    border-radius: 50%;
+    top: 73%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .beard {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100% / 20% 20% 120% 120%;
+    box-shadow: 0 0.5vmin #ddd;
+    filter: drop-shadow(0 0.5vmin 0.5vmin #0002);
+  }
+  
+  .beard::before {
+    content: "";
+    width: 22%;
+    height: 30%;
+    border-radius: 50%;
+    background: #fff;
+    left: -7%;
+    top: 8%;
+    color: #fff;
+    box-shadow:
+      2vmin 7vmin 0 2.5vmin,
+      6vmin 12vmin 0 1vmin,
+      16vmin 12vmin 0 2vmin,
+      22vmin 10vmin 0 1vmin,
+      24vmin 6vmin 0 1.6vmin,
+      26vmin 0
+      ;
+  }
+  
+  .ear {
+    width: 25%;
+    height: 35%;
+    border-radius: 50%;
+    top: 40%;
+    left: -15%;
+    background:
+      radial-gradient(circle at 100% 50%, var(--skindark) 50%, #0000 0) no-repeat 30% 60% / 50% 80%
+      ;
+    background-color: var(--skin);
+  }
+  
+  .ear + .ear {
+    right: -15%;
+    left: auto;
+    top: 42%;
+    background:
+      radial-gradient(circle at 0% 50%, var(--skindark) 50%, #0000 0) no-repeat 70% 60% / 50% 80%
+      ;
+    background-color: var(--skin);
+  }
+  
+  .cheek {
+    width: 30%;
+    height: 25%;
+    border-radius: 50%;
+    top: 50%;
+    left: 5%;
+    background: radial-gradient(farthest-side, var(--skindark), #0000);
+    opacity: 0.7;
+  }
+  
+  .cheek + .cheek {
+    left: auto;
+    right: 4%;
+  }
+   
+  .hat {
+    width: 36%;
+    height: 20%;
+    background: var(--suit);
+    left: 50%;
+    top: -5%;
+    transform: translateX(-50%);
+    border-radius: 100% 20% 0 0;
+  }
+  
+  .hat::before {
+    content:"";
+    background: var(--wool);
+    width: 30%;
+    height: 50%;
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+    transform: translate(70%, -50%);
+    box-shadow: inset -0.5vmin -0.5vmin 1vmin #0003;
+  }
+  
+  
+
+/*.palpebra {transform:translate(0, -10px);}*/
+
+.naso,
+.baffo,
+.sopracciglio,
+.ponpon,
+.cappello {
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+
+.baffo {
+  animation-duration: 1.5s;
+}
+
+.sopracciglio {
+  animation-duration: .5s;
+}
+
+.cappello {
+  animation-duration: 1.5s;
+}
+
+.barba {
+  animation: bounce-sm 1s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, -2%);
+  }
+  100% {
+    transform: translate(0, 2%);
+  }
+}
+
+@keyframes bounce-sm {
+  0% {
+    transform: translate(0, 0%);
+  }
+  100% {
+    transform: translate(0, 3%);
+  }
+}
+  ul {
+    position: absolute;
+    top: -60px;
+    left: 320px;
+    margin: auto;
+    list-style: none;
+    transform-origin: 50% 0%;
+  }
+  li {
+    --size: 7px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: var(--back);
+    margin-bottom: calc(var(--size) * 0.5);
+  }
+  
+  @property --fore-hue {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 343;
+  }
+  @keyframes colors {
+    10% {
+      --fore-hue: 343;
+    }
+    30% {
+      --fore-hue: 383;
+    }
+    70% {
+      --fore-hue: 213;
+    }
+    90%,
+    100% {
+      --fore-hue: 343;
+    }
+  }
+  

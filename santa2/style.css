@@ -1,0 +1,62 @@
+body {
+  position: relative; padding:0; margin:0;
+
+}
+
+.bg {
+  background: url('https://images.unsplash.com/photo-1443926818681-717d074a57af?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375') no-repeat center bottom #666;
+  background-size: cover;
+  position: fixed;
+  height: 100%; width:100%; text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+svg {margin-top:0;}
+
+
+/*.palpebra {transform:translate(0, -10px);}*/
+
+.naso,
+.baffo,
+.sopracciglio,
+.ponpon,
+.cappello {
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+
+.baffo {
+  animation-duration: 1.5s;
+}
+
+.sopracciglio {
+  animation-duration: .5s;
+}
+
+.cappello {
+  animation-duration: 1.5s;
+}
+
+.barba {
+  animation: bounce-sm 1s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, -2%);
+  }
+  100% {
+    transform: translate(0, 2%);
+  }
+}
+
+@keyframes bounce-sm {
+  0% {
+    transform: translate(0, 0%);
+  }
+  100% {
+    transform: translate(0, 3%);
+  }
+}
