@@ -1,0 +1,45 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    padding: 25px;
+    background-color: #1a1b26;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    cursor: pointer;
+}
+
+.icon {
+    max-width: 100%;
+}
+
+.icon-wrapper:hover .icon {
+    animation: shake 1s forwards;
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+    20% {
+        transform: rotate(-15deg);
+    }
+    30% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+}
+
+.fa-bell {
+    color: #fff;
+}

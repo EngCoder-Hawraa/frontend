@@ -27,16 +27,20 @@ body {
     top: 50%;
     height: 50px;
     width: 50px;
+    line-height: 50px;
     cursor: pointer;
     font-size: 1.25rem;
     position: absolute;
     text-align: center;
-    line-height: 50px;
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
     transform: translateY(-50%);
     transition: transform 0.1s linear;
+    -webkit-transition: transform 0.1s linear;
+    -moz-transition: transform 0.1s linear;
+    -ms-transition: transform 0.1s linear;
+    -o-transition: transform 0.1s linear;
 }
 
 .wrapper i:active {
