@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circles (sin, cos)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <p><small>CSS sin() and cos() does <strong>NOT</strong> work in your browser.</small></p>
+    <form id="controls" class="app horizontal horizontal-labels">
+        <fieldset>
+            <label>Number of rings
+      <input type="range" min="2" max="12" value="10" id="rings" />
+    </label>
+            <label>Dots per ring
+      <input type="range" min="5" max="12" value="7" id="dots" />
+    </label>
+            <label>Spread
+      <input type="range" min="10" max="40" value="40" id="spread" />
+    </label>
+        </fieldset>
+    </form>
+    <ul class="dots" id="app"></ul>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
