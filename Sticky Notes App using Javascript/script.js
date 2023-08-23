@@ -14,3 +14,7 @@ function content(e) {
         createBox.style.display = "none";
     }
 }
+
+function divStyle(params) {
+
+}

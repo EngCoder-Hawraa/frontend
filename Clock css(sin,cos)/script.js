@@ -40,6 +40,15 @@ console.log(window.navigator);
 
 
 // Window Screen
+console.log(window.screen);
+
+// Window Storage
+console.log(window.localStorage);
+console.log(window.sessionStorage);
+
+
+// Window Events
+
 
 
 console.log(window.navigator.userAgent);
