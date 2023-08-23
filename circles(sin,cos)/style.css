@@ -1,3 +1,19 @@
+html {
+    display: grid;
+    height: 100%;
+}
+
+body {
+    background: hsl(248, 50%, 25%);
+    color: hsl(248, 50%, 95%);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    margin-inline: auto;
+}
+
+p {
+    display: none;
+}
+
 .dots {
     --_w: 800px;
     --_sz: 30px;
@@ -19,22 +35,6 @@
     position: absolute;
     top: var(--_y);
     width: var(--_sz);
-}
-
-html {
-    display: grid;
-    height: 100%;
-}
-
-body {
-    background: hsl(248, 50%, 25%);
-    color: hsl(248, 50%, 95%);
-    font-family: ui-sans-serif, system-ui, sans-serif;
-    margin-inline: auto;
-}
-
-p {
-    display: none;
 }
 
 @supports not (left: calc(1px * cos(45deg))) {
