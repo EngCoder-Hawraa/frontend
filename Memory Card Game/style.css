@@ -54,3 +54,45 @@ section {
 .face {
     transform: rotateY(-180deg);
 }
+
+.custom-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, .2) 0px 5px 15px;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.modal-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.confirm-button {
+    background-color: #4caf50;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, .2) 0px 5px 15px;
+}
+
+.cancel-button {
+    background-color: #f44336;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, .2) 0px 5px 15px;
+}

@@ -73,13 +73,13 @@ const checkCards = (e) => {
     // Logic
     if (flippedCards.length === 2) {
         if (flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')) {
-            console.log('match');
+            // console.log('match');
             flippedCards.forEach(card => {
                 card.classList.remove("flipped");
                 card.style.pointerEvents = "none";
             })
         } else {
-            console.log('wrong');
+            // console.log('wrong');
             flippedCards.forEach(card => {
                 card.classList.remove("flipped");
                 setTimeout(() => card.classList.remove("toggleCard"), 1000);
@@ -88,15 +88,43 @@ const checkCards = (e) => {
             playerLives--;
             playerLivesCount.textContent = playerLives;
 
-            if (playerLives === 0) {
-                restart("Try Again");
-            }
+            // if (playerLives === 0) {
+            //     restart("Try Again");
+            // }
         }
     }
     // Run a check to see if we won the game
-    if (toggleCard.length === 16) {
-        restart("You Won");
+    if (toggleCard.length === 12) {
+        // Create a custom confirmation modal
+        var modal = document.createElement("div");
+        modal.classList.add("custom-modal");
 
+        var message = document.createElement("p");
+        message.textContent = "لقد فزت 😍😍\n هل ترغب في اللعب مجددا ؟؟؟";
+        message.classList.add("modal-message");
+        modal.appendChild(message);
+
+        var confirmButton = document.createElement("button");
+        confirmButton.textContent = "نعم";
+        confirmButton.classList.add("modal-button", "confirm-button");
+        confirmButton.addEventListener("click", function() {
+            // Handle play again
+            // Reload the game
+            modal.remove();
+            location.reload();
+        });
+        modal.appendChild(confirmButton);
+
+        var cancelButton = document.createElement("button");
+        cancelButton.textContent = "لا";
+        cancelButton.classList.add("modal-button", "cancel-button");
+        cancelButton.addEventListener("click", function() {
+            // Handle not playing again
+            modal.remove();
+        });
+        modal.appendChild(cancelButton);
+
+        document.body.appendChild(modal);
     }
 };
 
